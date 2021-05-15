@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+
+/*視窗背景色設定*/
+body{
+	background-color: #ADADAD;
+	/*background-image: url(./Sushi.jpeg);*/
+	/*background-repeat: no-repeat;*/ /*指定背景圖 重複方向 repeat-x/y*/
+	/*background-position: center top;*/
+	/*background-attachment: fixed;*/ /*背景圖位置固定 內容跟著捲動*/
+	/*background-size: 200mm 100mm;*/
+}
+ 
+.icon span{
+	font-family: 'Noto Serif TC', serif;
+	font-size: 50px;
+	text-shadow: 1px 1px 2px #000079; 
+	margin-left: 130px; 
+}
+.icon:before{
+	content:'';
+	background: url('car.png');
+	background-size:100px 100px;
+	background-repeat: no-repeat;
+    position: absolute;
+    width:100px;
+    height:200px;
+    z-index: 100;
+    top: 15px;
+	margin-left: 15px;
+}
+a{
+	color: #000093;
+	text-decoration: none;
+}
+a:hover{
+	color: #ff705b;
+	text-decoration: none;
+}
+#banner  {
+	background-color: #FFFFFF;
+	text-align: center;
+	margin: 10px 100px;
+	padding: 0.002mm 20px;
+	/*border: 1px solid #f6bb9e;*/
+	
+}
+#banner ul li {
+	display:inline-block;
+	margin: 20px 40px;
+	font-family: 'Noto Serif TC', serif;
+	font-size: 25px;
+}
+.clear {
+	clear: both;
+}
+/*圖片*/
+.imgR {
+	float: right;
+	margin-right: 100px;
+}
+#form_1 {
+	float: left;
+	text-align: center;
+	margin-left: 100px;
+	margin-top: 10px;
+	background-color: #FFFFFF;
+}
+#form_2 {
+	float: right;
+	text-align: center;
+	margin-right: 100px;
+	margin-top: 10px;
+	background-color: #FFFFFF;
+}
+
+
+/*表單樣式*/
+.entryTable{
+	width: 100%;
+	border-collapse: collapse;
+	border: 2px solid #9393FF;
+	font-family: 'Noto Serif TC', serif;
+	font-size: 18px;
+	
+}
+.entryTable caption {
+	font-family: 'Noto Serif TC', serif;
+	font-size: 25px;
+	margin-bottom: 10px;
+	
+}
+.entryTable th{
+	width: 10em;
+	background-color: #CECEFF;
+	border: 1px solid #9393FF;
+}
+.entryTable td{
+	padding: 10px 20px;
+}
+.entryBtns {
+	text-align: center;
+}
+.entryBtns input{
+	width: 100px;
+	margin: 0 10px;
+	padding: 10px;
+	font-size: 1em;
+	-webkit-appearance: none;
+}
+.entryBtns input[type="submit"]{
+	background-color: #CECEFF;
+}
+.entryBtns input:hover{
+	opacity: 0.7;
+}
+
+
