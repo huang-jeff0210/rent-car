@@ -13,11 +13,11 @@
 		<p class="icon"><span><b>佑宗出租</b></span></p>
 		<div id="banner">
 			<ul>
-				<li><a href="#rent" target="_blank">我要租車</a></li>
-				<li><a href="https://www.youtube.com/" target="_blank">提供車輛出租</a></li>
-				<li><a href="https://www.google.com/maps" target="_blank">服務據點</a></li>
-				<li><a href="租車界面.html" target="_blank">車款介紹</a></li>
-				<li><a href="https://www.netflix.com/browse" target="_blank">會員中心</a></li>
+				<li><a href="#rent" target="_self">我要租車</a></li>
+				<li><a href="https://www.youtube.com/" target="_self">提供車輛出租</a></li>
+				<li><a href="https://www.google.com/maps" target="_self">服務據點</a></li>
+				<li><a href="租車界面.html" target="_self">車款介紹</a></li>
+				<li><a href="https://www.netflix.com/browse" target="_self">會員中心</a></li>
 			</ul>
 		</div>
 	</header>
@@ -28,6 +28,22 @@
 		<form action="">
 			<table border="1" class="entryTable">
 			<caption>我要租車</caption>
+				<tr>
+					<th>車種選擇</th>
+					<td>
+						<select name="start_location" style="width: 150px;">
+							<option value="" selected>請選擇</option>
+							<option value="vios">2021 Vios 1.5雅緻＋</option>
+							<option value="corolla">2021 Corolla Cross 1.8 Hybrid旗艦</option>
+							<option value="camry">2021 Toyota Camry 2.0豪華</option>
+							<option value="altis">2019 Altis 1.8豪華版</option>
+							<option value="mazda">2019 MAZDA MAZDA 3 5D</option>
+							<option value="rav4">2018 Toyota RAV4 2.0尊爵</option>
+							<option value="yaris">2017 Yaris 1.5經典＋</option>
+							<option value="wish">2016 Toyota Wish 2.0豪華</option>
+						</select>
+					</td>
+				</tr>
 				<tr>
 					<th>取車地點</th>
 					<td>
