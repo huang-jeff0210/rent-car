@@ -1,18 +1,45 @@
-.head{
-			background-color: #003344;
-			color: white;
-			font-weight: bold;
-			font-size: 50px;
-			text-align: center;
-			padding: 10px;
+body{
+	background-color: #ADADAD;
+	/*background-image: url(./Sushi.jpeg);*/
+	/*background-repeat: no-repeat;*/ /*指定背景圖 重複方向 repeat-x/y*/
+	/*background-position: center top;*/
+	/*background-attachment: fixed;*/ /*背景圖位置固定 內容跟著捲動*/
+	/*background-size: 200mm 100mm;*/
 }
-.summary{
-	background-color: #B9B9FF;
-	color: white;
-	font-weight: bold;
-	font-size: 20px;
+#contents > section + section{
+	margin-top: 80px;
+}
+.icon span{
+	font-family: 'Noto Serif TC', serif;
+	font-size: 50px;
+	text-shadow: 1px 1px 2px #000079; 
+	margin-left: 130px; 
+}
+.icon:before{
+	content:'';
+	background: url('car.png');
+	background-size:100px 100px;
+	background-repeat: no-repeat;
+    position: absolute; 
+    width:100px;
+    height:200px;
+    z-index: 100;
+    top: 15px;
+	margin-left: 15px;
+}
+#banner  {
+	background-color: #FFFFFF;
 	text-align: center;
-	padding: 10px;
+	margin: 10px 100px;
+	padding: 0.002mm 20px;
+	/*border: 1px solid #f6bb9e;*/
+	
+}
+#banner ul li {
+	display:inline-block;
+	margin: 20px 40px;
+	font-family: 'Noto Serif TC', serif;
+	font-size: 25px;
 }
 main{ /*容器  flex-wrap使容器換行*/
 	display: flex;flex-wrap: wrap;
@@ -20,7 +47,7 @@ main{ /*容器  flex-wrap使容器換行*/
 	justify-content: center;
 	/*垂直對齊 stretch預設 center靠中 flex-start靠上*/
 	/*align-items: flex-start;*/
-	background-color: #ECECFF;
+	background-color: #003060;
 }
 main >.form{ 
 	flex: none;
