@@ -19,7 +19,7 @@ body{
 	content:'';
 	background: url('car.png');
 	background-size:100px 100px;
-	background-repeat: no-repeat;
+	background-repeat: no-repeat; 
     position: absolute; 
     width:100px;
     height:200px;
@@ -27,19 +27,35 @@ body{
     top: 15px;
 	margin-left: 15px;
 }
+a{
+	color: #000093;
+	text-decoration: none;
+}
+a:hover{
+	color: #ff705b;
+	text-decoration: none;
+}
 #banner  {
 	background-color: #FFFFFF;
 	text-align: center;
 	margin: 10px 100px;
 	padding: 0.002mm 20px;
 	/*border: 1px solid #f6bb9e;*/
-	
+	 
 }
 #banner ul li {
 	display:inline-block;
 	margin: 20px 40px;
 	font-family: 'Noto Serif TC', serif;
 	font-size: 25px;
+}
+#contact_us {
+	margin-top: 80px;
+	padding: 20px 50px;
+	background-color: #FFFFFF;
+	text-align: center;
+	font-family: 'Noto Serif TC', serif;
+	font-size: 18px;
 }
 main{ /*容器  flex-wrap使容器換行*/
 	display: flex;flex-wrap: wrap;
