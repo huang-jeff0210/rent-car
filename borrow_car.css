@@ -76,7 +76,7 @@ main >.form{
 main >.item{ /*項目*/
 	flex: none;
 	width:270px;
-	height:250px;
+	height:300px;
 	margin:10px; 
 	background-color: white;
 	text-align: center;
