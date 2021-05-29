@@ -63,27 +63,30 @@ a:hover{
 	margin-top: 80px;
 }
 .imgL {
-	float: left;
+	float: left; 
 	margin-left: 100px;
 	margin-top: 80px;
 }
 
-/*表單*/
-#form_1 {
-	float: left;
-	text-align: center;
-	margin-left: 100px;
-	margin-top: 10px;
-	background-color: #FFFFFF;
+@media (min-width: 700px) {
+	/*表單*/
+	#form_1 {
+		width: 35%;
+		float: left;
+		text-align: center;
+		margin-left: 100px;
+		margin-top: 10px;
+		background-color: #FFFFFF;
+	}
+	#form_2 {
+		width: 35%;
+		float: right;
+		text-align: center;
+		margin-right: 100px;
+		margin-top: 10px;
+		background-color: #FFFFFF;
+	}
 }
-#form_2 {
-	float: right;
-	text-align: center;
-	margin-right: 100px;
-	margin-top: 10px;
-	background-color: #FFFFFF;
-}
-
 
 /*表單樣式*/
 .entryTable {
