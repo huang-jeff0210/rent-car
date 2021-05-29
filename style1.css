@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset "UTF-8";
 
 
 /*視窗背景色設定*/
@@ -60,12 +60,12 @@ a:hover{
 .imgR {
 	float: right;
 	margin-right: 100px;
-	margin-top: 30px;
+	margin-top: 80px;
 }
 .imgL {
 	float: left;
 	margin-left: 100px;
-	margin-top: 30px;
+	margin-top: 80px;
 }
 
 /*表單*/
@@ -89,7 +89,7 @@ a:hover{
 .entryTable {
 	width: 100%;
 	border-collapse: collapse;
-	border: 2px solid #9393FF;
+	border: 2px solid #000;
 	font-family: 'Noto Serif TC', serif;
 	font-size: 18px;
 	
@@ -102,8 +102,10 @@ a:hover{
 }
 .entryTable th{
 	width: 10em;
-	background-color: #CECEFF;
-	border: 1px solid #9393FF;
+	color: #fff;
+	text-align: center;
+	background-color: #808080;
+	border: 1px solid #000;
 }
 .entryTable td{
 	padding: 10px 20px;
@@ -128,7 +130,8 @@ a:hover{
 #contact_us {
 	margin-top: 80px;
 	padding: 20px 50px;
-	background-color: #FFFFFF;
+	background-color: #395259;
+	color: #FFFFFF;
 	text-align: center;
 	font-family: 'Noto Serif TC', serif;
 	font-size: 18px;

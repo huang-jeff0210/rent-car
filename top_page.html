@@ -1,185 +1,323 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>網頁</title>
-	<link href="./style1.css" rel="stylesheet" media="all">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style1.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/images/icon.png" type="image/x-icon">
+    <title>佑宗租車</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style_slider.css">
+    <link rel="stylesheet" href="assets/css/mbr-additional.css" type="text/css">
 </head>
-<body> 
-	<header>
-		<p class="icon"><span><b><a href="top_page.html" target="_self">佑宗出租</a></b></span></p>
-		<div id="banner"><b>
-			<ul>
-				<li><a href="#rent">我要租車</a></li>
-				<li><a href="#provide_car">提供車輛出租</a></li>
-				<li><a href="position.html" target="_self">服務據點</a></li>
-				<li><a href="borrow_car.html" target="_self">車款介紹</a></li>
-				<li><a href="membership.html" target="_self">會員中心</a></li>
-			</ul>
-		</b></div>
-	</header>
-	<main id="contents">
-		<section id="rent">
-			<img src="car1.jpeg" alt="car1" width="45%" height="50%" class="imgR">
-		<div id="form_1">
-		<form action="">
-			<table border="1" class="entryTable">
-			<caption>我要租車</caption>
-				<tr>
-					<th>取車地點</th>
-					<td>
-						<select name="start_location" style="width: 150px;">
-							<option value="" selected>請選擇</option>
-							<option value="0">東吳大學</option>
-							<option value="1">士林捷運站</option>
-							<option value="2">劍潭捷運站</option>
-							<option value="3">大直美麗華</option>
-							<option value="4">故宮博物院</option>
-						</select>
-					</td>
-				</tr> 
-				<tr>
-					<th>還車地點</th>
-					<td>
-						<select name="end_location" style="width: 150px;">
-							<option value="" selected>請選擇</option>
-							<option value="0">東吳大學</option>
-							<option value="1">士林捷運站</option>
-							<option value="2">劍潭捷運站</option>
-							<option value="3">大直美麗華</option>
-							<option value="4">故宮博物院</option>
-						</select>
-					</td>
-				</tr>
-				<tr>
-					<th>車輛選擇</th>
-					<td>
-						<select name="car" style="width: 150px;">
-							<option value="" selected>請選擇</option>
-							<option value="vios">2021 Vios 1.5雅緻＋</option>
-							<option value="corolla">2021 Corolla Cross 1.8 Hybrid旗艦</option>
-							<option value="camry">2021 Toyota Camry 2.0豪華</option>
-							<option value="altis">2019 Altis 1.8豪華版</option>
-							<option value="mazda">2019 MAZDA MAZDA 3 5D</option>
-							<option value="rav4">2018 Toyota RAV4 2.0尊爵</option>
-							<option value="yaris">2017 Yaris 1.5經典＋</option>
-							<option value="wish">2016 Toyota Wish 2.0豪華</option>
-						</select>
-					</td>
-				</tr>
-				<tr>
-					<th>取車日期與時間</th>
-					<td><input type="date" name="start_date" value="2021-05-15" style="width: 130px;">
-						<input type="time" name="start_time" value="12:00" style="width: 130px;">
-					</td>
-				</tr>
-				<tr>
-					<th>還車日期與時間</th>
-					<td><input type="date" name="end_date" value="2021-05-16" style="width: 130px;">
-						<input type="time" name="end_time" value="20:00"style="width: 130px;">
-					</td>
-				</tr>
-				<tr>
-					<th>姓名</th>
-					<td><input type="text" name="customer" style="width: 140px;"></td>
-				</tr>
-				<tr>
-					<th>手機</th>
-					<td><input type="text" name="phone" style="width: 140px;"></td>
-				</tr>
-				<tr>
-					<th>備註</th>
-					<td><textarea name="memo" rows="5" cols="20" style="width: 277px;"></textarea></td>
-				</tr>
-			</table>
-			<br>
-			<div class="entryBtns">
-				<input type="reset" value="清除重填">
-				<input type="submit" value="送出申請">
+<!-- 標題menu -->
 
-			</div>
-
-		</form>
-		</div>
-			<p class="clear"></p>
-		</section>
-
-		<section id="provide_car">
-			<br>
-			<img src="car2.jpeg" alt="car2" width="45%" height="50%" class="imgL">
-		<div id="form_2">			
-		<form action="">
-			<table border="1" class="entryTable">
-				<caption>提供車輛出租</caption>
-				<tr>
-					<th>提供車輛種類</th>
-					<td>
-						<select name="car_type" style="width: 150px;">
-							<option value="" selected>請選擇</option>
-							<option value="0">轎車</option>
-							<option value="1">休旅車</option>
-							<option value="2">跑車</option>
-							<option value="3">電動車</option>
-					</td>
-				</tr>
-				<tr>
-					<th>車輛提供地點</th>
-					<td>
-						<select name="provide_location" style="width: 150px;">
-							<option value="" selected>請選擇</option>
-							<option value="0">東吳大學</option>
-							<option value="1">士林捷運站</option>
-							<option value="2">劍潭捷運站</option>
-							<option value="3">大直美麗華</option>
-							<option value="4">故宮博物院</option>
-						</select>
-					</td>
-				</tr>
-				<tr>
-					<th>提供車輛起始時間</th>
-					<td><input type="date" name="start_date" value="2021-05-15" style="width: 140px;">
-						<input type="time" name="start_time" value="12:00" style="width: 140px;">
-					</td>
-				</tr>
-				<tr>
-					<th>提供車輛結束時間</th>
-					<td><input type="date" name="start_date" value="2021-05-16" style="width: 140px;">
-						<input type="time" name="start_time" value="20:00" style="width: 140px;">
-					</td>
-				</tr>
-				<tr>
-					<th>姓名</th>
-					<td><input type="text" name="customer" style="width: 140px;"></td>
-				</tr>
-				<tr>
-					<th>手機</th>
-					<td><input type="text" name="phone" style="width: 140px;"></td>
-				</tr>
-				<tr>
-					<th>備註</th>
-					<td><textarea name="memo" rows="5" cols="20" style="width: 277px;"></textarea></td>
-				</tr>
-			</table>
-			<br>
-			<div class="entryBtns">
-				<input type="reset" value="清除重填">
-				<input type="submit" value="送出申請">
-			</div>
-		</form>
-		</div>
-		</section>
-	</main>
-		<p class="clear"></p>
-	<footer>
-		<div id="contact_us">
-			Copyright © 佑宗租車公司 ALL RIGHTS RESERVED <br>
-			公司地址：東吳大學 &nbsp&nbsp&nbsp電話：0800-420-420 &nbsp&nbsp&nbsp傳真：02-28825252
-			
-		</div>
-		
-	</footer>
+<body>
+    <header>
+        <section class="mbr-navbar mbr-navbar--freeze mbr-navbar--absolute mbr-navbar--transparent mbr-navbar--sticky mbr-navbar--auto-collapse" id="menu-59">
+            <div class="mbr-navbar__section mbr-section">
+                <div class="mbr-section__container container">
+                    <div class="mbr-navbar__container">
+                        <div class="mbr-navbar__column mbr-navbar__column--s mbr-navbar__brand">
+                            <span class="mbr-navbar__brand-link mbr-brand mbr-brand--inline">
+                                <span class="mbr-brand__logo"><a href=""><img class="mbr-navbar__brand-img mbr-brand__img" src="assets/images/icon.png" alt="Mobirise"></a></span>
+                                <span class="mbr-brand__name"><a class="mbr-brand__name text-white" href="">佑宗出租</a></span>
+                            </span>
+                        </div>
+                        <div class="mbr-navbar__hamburger mbr-hamburger text-white"><span class="mbr-hamburger__line"></span></div>
+                        <div class="mbr-navbar__column mbr-navbar__menu">
+                            <nav class="mbr-navbar__menu-box mbr-navbar__menu-box--inline-right">
+                                <div class="mbr-navbar__column">
+                                    <ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-decorator mbr-buttons--active">
+                                        <li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="#rent">我要租車</a></li>
+                                        <li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="#provide_car">提供車輛出租</a></li>
+                                        <li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="borrow_car.html">車款介紹</a></li>
+                                        <li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="position.html">服務據點</a></li>
+                                        <li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="blog.html">會員中心</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mbr-navbar__column">
+                                    <ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-inverse mbr-buttons--active">
+                                        <li class="mbr-navbar__item"></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content-2 simple col-1 col-undefined mbr-parallax-background mbr-after-navbar" id="content5-77" style="background-image: url(assets/images/bmw.jpeg);">
+            <div class="mbr-overlay" style="opacity: 0.6; background-color: rgb(0, 0, 0);"></div>
+            <div class="container">
+                <div class="row">
+                    <div>
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h3 style="font-family: 'Noto Serif TC', serif;">佑宗出 租了嗎</h3>
+                                <div>
+                                    <p style="font-family: 'Noto Serif TC', serif;">有用車需求？ 來找我們！ <br></p>
+                                    <p style="font-family: 'Noto Serif TC', serif;">有閒置車輛？ 來找我們！ <br></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <section class="mbr-section" id="header3-78">
+        <div class="mbr-section__container container mbr-section__container--first">
+            <div class="mbr-header mbr-header--wysiwyg row">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <h3 class="mbr-header__text">佑宗出租簡介&nbsp;</h3>
+                    <p class="mbr-header__subtext">Company Profile</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mbr-section" id="content1-79">
+        <div class="mbr-section__container container mbr-section__container--middle">
+            <div class="row">
+                <div class="mbr-article mbr-article--wysiwyg col-sm-8 col-sm-offset-2">
+                    <p>公司建立於2021年，創辦人是由4位大學畢業的年輕人，一起合資共同經營。擁有多款新車提供租借，且價格親民、還有學生優惠。提供完善的服務，從取車、租車到還車皆有專門的服務人員協助，擁有健全的保險制度，不怕意外發生。本出租公司有全台首創的租車制度，用您閒置的車輛，幫您賺取些許油錢補貼，在沒有需要用到車輛的時間，提供給我們幫您出租給需要的人！&nbsp;</p>
+                    <blockquote><em>最優良的出租公司，讓您佑宗出租了！&nbsp;</em></blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+    <main id="contents">
+        <br><br><br>
+        <!-- 幻燈片 -->
+        <section class="mbr-slider mbr-section mbr-section--no-padding carousel slide" data-ride="carousel" data-wrap="true" data-interval="5000" id="slider2-88">
+            <div class="mbr-section__container container article-slider mbr-section__container--middle">
+                <div class=" col-sm-8 col-sm-offset-2">
+                    <ol class="carousel-indicators">
+                        <li data-app-prevent-settings="" data-target="#slider2-88" data-slide-to="0" class="active"></li>
+                        <li data-app-prevent-settings="" data-target="#slider2-88" data-slide-to="1"></li>
+                        <li data-app-prevent-settings="" data-target="#slider2-88" class="" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--bg-adapted item dark center active">
+                            <div class="mbr-box__magnet">
+                                <div>
+                                    <img src="assets/images/man_key.jpeg">
+                                    <div class="row">
+                                        <div class="col-sm-8 col-sm-offset-2">
+                                            <div class="mbr-hero">
+                                                <h1 class="mbr-hero__text">提供完善服務</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--bg-adapted item dark center">
+                            <div class="mbr-box__magnet">
+                                <div>
+                                    <img src="assets/images/women_car.jpeg">
+                                    <div class="row">
+                                        <div class="col-sm-8 col-sm-offset-2">
+                                            <div class="mbr-hero">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--bg-adapted item dark center">
+                            <div class="mbr-box__magnet">
+                                <div>
+                                    <img src="assets/images/new_car.jpeg">
+                                    <div class="row">
+                                        <div class="col-sm-8 col-sm-offset-2">
+                                            <div class="mbr-hero">
+                                                <h1 class="mbr-hero__text">新車亮相</h1>
+                                                <p class="mbr-hero__subtext">最新跑車提供租借，早鳥優惠價，快來搶購</p>
+                                            </div>
+                                            <div class="mbr-buttons btn-inverse mbr-buttons--center"><a class="mbr-buttons__btn btn btn-lg btn-info" href="">MORE..</a> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a data-app-prevent-settings="" class="left carousel-control" role="button" data-slide="prev" href="#slider2-88">
+                        <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a data-app-prevent-settings="" class="right carousel-control" role="button" data-slide="next" href="#slider2-88">
+                        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="rent">
+            <img src="car1.jpeg" alt="car1" width="50%" height="50%" class="imgR">
+            <!-- 表單1 -->
+            <div id="form_1">
+                <form action="">
+                    <table border="1" class="entryTable">
+                        <caption>我要租車</caption>
+                        <tr>
+                            <th>取車地點</th>
+                            <td>
+                                <select name="start_location" style="width: 150px;">
+                                    <option value="" selected>請選擇</option>
+                                    <option value="0">東吳大學</option>
+                                    <option value="1">士林捷運站</option>
+                                    <option value="2">劍潭捷運站</option>
+                                    <option value="3">大直美麗華</option>
+                                    <option value="4">故宮博物院</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>還車地點</th>
+                            <td>
+                                <select name="end_location" style="width: 150px;">
+                                    <option value="" selected>請選擇</option>
+                                    <option value="0">東吳大學</option>
+                                    <option value="1">士林捷運站</option>
+                                    <option value="2">劍潭捷運站</option>
+                                    <option value="3">大直美麗華</option>
+                                    <option value="4">故宮博物院</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>車輛選擇</th>
+                            <td>
+                                <select name="car" style="width: 150px;">
+                                    <option value="" selected>請選擇</option>
+                                    <option value="vios">2021 Vios 1.5雅緻＋</option>
+                                    <option value="corolla">2021 Corolla Cross 1.8 Hybrid旗艦</option>
+                                    <option value="camry">2021 Toyota Camry 2.0豪華</option>
+                                    <option value="altis">2019 Altis 1.8豪華版</option>
+                                    <option value="mazda">2019 MAZDA MAZDA 3 5D</option>
+                                    <option value="rav4">2018 Toyota RAV4 2.0尊爵</option>
+                                    <option value="yaris">2017 Yaris 1.5經典＋</option>
+                                    <option value="wish">2016 Toyota Wish 2.0豪華</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>取車日期與時間</th>
+                            <td><input type="date" name="start_date" value="2021-05-15" style="width: 130px;">
+                                <input type="time" name="start_time" value="12:00" style="width: 130px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>還車日期與時間</th>
+                            <td><input type="date" name="end_date" value="2021-05-16" style="width: 130px;">
+                                <input type="time" name="end_time" value="20:00" style="width: 130px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>姓名</th>
+                            <td><input type="text" name="customer" style="width: 140px;"></td>
+                        </tr>
+                        <tr>
+                            <th>手機</th>
+                            <td><input type="text" name="phone" style="width: 140px;"></td>
+                        </tr>
+                        <tr>
+                            <th>備註</th>
+                            <td><textarea name="memo" rows="5" cols="20" style="width: 277px;"></textarea></td>
+                        </tr>
+                    </table>
+                    <br>
+                    <div class="entryBtns">
+                        <input type="reset" value="清除重填">
+                        <input type="submit" value="送出申請">
+                    </div>
+                </form>
+            </div>
+            <p class="clear"></p>
+        </section>
+        <section id="provide_car">
+            <br>
+            <img src="car2.jpeg" alt="car2" width="49%" height="50%" class="imgL">
+            <!-- 表單2 -->
+            <div id="form_2">
+                <form action="">
+                    <table border="1" class="entryTable">
+                        <caption>提供車輛出租</caption>
+                        <tr>
+                            <th>提供車輛種類</th>
+                            <td>
+                                <select name="car_type" style="width: 150px;">
+                                    <option value="" selected>請選擇</option>
+                                    <option value="0">轎車</option>
+                                    <option value="1">休旅車</option>
+                                    <option value="2">跑車</option>
+                                    <option value="3">電動車</option>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>車輛提供地點</th>
+                            <td>
+                                <select name="provide_location" style="width: 150px;">
+                                    <option value="" selected>請選擇</option>
+                                    <option value="0">東吳大學</option>
+                                    <option value="1">士林捷運站</option>
+                                    <option value="2">劍潭捷運站</option>
+                                    <option value="3">大直美麗華</option>
+                                    <option value="4">故宮博物院</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>提供車輛起始時間</th>
+                            <td><input type="date" name="start_date" value="2021-05-15" style="width: 140px;">
+                                <input type="time" name="start_time" value="12:00" style="width: 140px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>提供車輛結束時間</th>
+                            <td><input type="date" name="start_date" value="2021-05-16" style="width: 140px;">
+                                <input type="time" name="start_time" value="20:00" style="width: 140px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>姓名</th>
+                            <td><input type="text" name="customer" style="width: 140px;"></td>
+                        </tr>
+                        <tr>
+                            <th>手機</th>
+                            <td><input type="text" name="phone" style="width: 140px;"></td>
+                        </tr>
+                        <tr>
+                            <th>備註</th>
+                            <td><textarea name="memo" rows="5" cols="20" style="width: 277px;"></textarea></td>
+                        </tr>
+                    </table>
+                    <br>
+                    <div class="entryBtns">
+                        <input type="reset" value="清除重填">
+                        <input type="submit" value="送出申請">
+                    </div>
+                </form>
+            </div>
+        </section>
+        <p class="clear"></p>
+    </main>
+    <p class="clear"></p>
+    <footer>
+        <div id="contact_us">
+            Copyright © 佑宗租車公司 ALL RIGHTS RESERVED <br>
+            公司地址：東吳大學 &nbsp&nbsp&nbsp電話：0800-420-420 &nbsp&nbsp&nbsp傳真：02-28825252
+        </div>
+        <p class="clear"></p>
+    </footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
+
 </html>

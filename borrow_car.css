@@ -1,14 +1,14 @@
 body{
-	background-color: #ADADAD;
+	background-color: #fff;
 	/*background-image: url(./Sushi.jpeg);*/
 	/*background-repeat: no-repeat;*/ /*指定背景圖 重複方向 repeat-x/y*/
 	/*background-position: center top;*/
 	/*background-attachment: fixed;*/ /*背景圖位置固定 內容跟著捲動*/
 	/*background-size: 200mm 100mm;*/
 }
-#contents > section + section{
+/*#contents > section + section{
 	margin-top: 80px;
-}
+}*/
 .icon span{
 	font-family: 'Noto Serif TC', serif;
 	font-size: 50px;
@@ -41,7 +41,7 @@ a:hover{
 	margin: 10px 100px;
 	padding: 0.002mm 20px;
 	/*border: 1px solid #f6bb9e;*/
-	 
+	  
 }
 #banner ul li {
 	display:inline-block;
@@ -52,7 +52,8 @@ a:hover{
 #contact_us {
 	margin-top: 80px;
 	padding: 20px 50px;
-	background-color: #FFFFFF;
+	background-color: #395259;
+	color: #FFFFFF;
 	text-align: center;
 	font-family: 'Noto Serif TC', serif;
 	font-size: 18px;
@@ -74,6 +75,7 @@ main >.form{
 	text-align: center;
 }
 main >.item{ /*項目*/
+	font-family: 'Noto Serif TC', serif;
 	flex: none;
 	width:270px;
 	height:300px;
