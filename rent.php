@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
 <head>
     <meta charset="UTF-8">
@@ -67,86 +67,124 @@
             </div>
         </section>
     </header>
-    <form action="">
-        <table border = "1" class="entryTable">
-            <caption>訂單確認</caption>
-            <tr>
-<?php
-$start_location = $_GET["start_location"];  // 取得選擇鈕值
-switch ($start_location) {
-    case "0":
-        print "東吳大學<br/>"."</tr>"; break;
-    case "1":
-        print "士林捷運站<br/>"."</tr>"; break;
-    case "2":
-        print "劍潭捷運站<br/>"."</tr>"; break;
-    case "3":
-        print "大直美麗華<br/>"."</tr>"; break;
-    case "4":
-        print "故宮博物院<br/>"."</tr>"; break;
-} 
+    <p style="text-align: right; margin-right: 400px; margin-top: 20px; margin-bottom: -50px; font-size: 25px; font-family: 'Noto Serif TC', serif;">車輛照片</p>
+        <p class="clear"></p>
+    <img src="<?php $car = $_GET["car"];
+    switch ($car) {
+        case "vios":
+            print "Vios.jpeg"; break;
+        case "corolla":
+            print "corolla.jpg"; break;
+        case "camry":
+            print "camry.jpeg"; break;
+        case "altis":
+            print "Altis.jpg"; break;
+        case "mazda":
+            print "mazda.png"; break;
+        case "rav4":
+            print "rav4.jpg"; break;
+        case "yaris":
+            print "yaris.jpg"; break;
+        case "wish":
+            print "wish.jpg"; break;
+    }?>" alt="car1" width="50%" height="50%" class="imgR" style="border: 2px solid #000;">
 
-$end_location = $_GET["end_location"];  // 取得選擇鈕值
-switch ($end_location) {
-    case "0":
-        print "東吳大學<br/>"; break;
-    case "1":
-        print "士林捷運站<br/>"; break;
-    case "2":
-        print "劍潭捷運站<br/>"; break;
-    case "3":
-        print "大直美麗華<br/>"; break;
-    case "4":
-        print "故宮博物院<br/>"; break;
-} 
-
-$car = $_GET["car"];  // 取得選擇鈕值
-switch ($car) {
-    case "vios":
-        print "2021 Vios 1.5雅緻＋</br>"; break;
-    case "corolla":
-        print "2021 Corolla Cross 1.8 Hybrid旗艦</br>"; break;
-    case "camry":
-        print "2021 Toyota Camry 2.0豪華</br>"; break;
-    case "altis":
-        print "2019 Altis 1.8豪華版</br>"; break;
-    case "mazda":
-        print "2019 MAZDA MAZDA 3 5D</br>"; break;
-    case "rav4":
-        print "2018 Toyota RAV4 2.0尊爵</br>"; break;
-    case "yaris":
-        print "2017 Yaris 1.5經典＋</br>"; break;
-    case "wish":
-        print "Toyota Wish 2.0豪華</br>"; break;
-}
-
-$start_date = $_GET["start_date"];
-$start_time = $_GET["start_time"];
-print $start_date . " " .$start_time."</br>";
-
-$end_date = $_GET["end_date"];
-$end_time = $_GET["end_time"];
-print $end_date . " " .$end_time."</br>";
-
-$customer = $_GET["customer"];
-print $customer."</br>";
-
-$phone = $_GET["phone"];
-print $phone."</br>";
-
-$memo = $_GET["memo"];
-print nl2br($memo)."</br>";
-?>    
+    <div id="form_1">
+    <?php
+    echo "<table border = '1' class='entryTable'>"; 
+    echo "<caption>訂單確認</caption>";
+    $start_location = $_GET["start_location"];  // 取得選擇鈕值
+    echo "<tr><th>取車地點</th><td>";
+    switch ($start_location) {
+        case "0":
+            print "東吳大學</td></tr>"; break;
+        case "1":
+            print "士林捷運站</td></tr>"; break;
+        case "2":
+            print "劍潭捷運站</td></tr>"; break;
+        case "3":
+            print "大直美麗華</td></tr>"; break;
+        case "4":
+            print "故宮博物院</td></tr>"; break;
+    } 
 
 
+    $end_location = $_GET["end_location"];  // 取得選擇鈕值
+    echo "<tr><th>還車地點</th><td>";
+    switch ($end_location) {
+        case "0":
+            print "東吳大學</td></tr>"; break;
+        case "1":
+            print "士林捷運站</td></tr>"; break;
+        case "2":
+            print "劍潭捷運站</td></tr>"; break;
+        case "3":
+            print "大直美麗華</td></tr>"; break;
+        case "4":
+            print "故宮博物院</td></tr>"; break;
+    } 
+    $car = $_GET["car"];  // 取得選擇鈕值
+    echo "<tr><th>車輛選擇</th><td>";
+    switch ($car) {
+        case "vios":
+            print "2021 Vios 1.5雅緻＋</td></tr>"; break;
+        case "corolla":
+            print "2021 Corolla Cross 1.8 Hybrid旗艦</td></tr>"; break;
+        case "camry":
+            print "2021 Toyota Camry 2.0豪華</td></tr>"; break;
+        case "altis":
+            print "2019 Altis 1.8豪華版</td></tr>"; break;
+        case "mazda":
+            print "2019 MAZDA MAZDA 3 5D</td></tr>"; break;
+        case "rav4":
+            print "2018 Toyota RAV4 2.0尊爵</td></tr>"; break;
+        case "yaris":
+            print "2017 Yaris 1.5經典＋</td></tr>"; break;
+        case "wish":
+            print "Toyota Wish 2.0豪華</td></tr>"; break;
+    }
+    
 
 
-            </tr>
+    $start_date = $_GET["start_date"];
+    $start_time = $_GET["start_time"];
+    echo "<tr><th>取車時間</th><td>";
+    print $start_date . " " .$start_time."</td></tr>";
+    
 
-        </table>
+    $end_date = $_GET["end_date"];
+    $end_time = $_GET["end_time"];
+    echo "<tr><th>還車時間</th><td>";
+    print $end_date . " " .$end_time."</td></tr>";
 
-    </form>
-        
 
+    $customer = $_GET["customer"];
+    echo "<tr><th>姓名</th><td>";
+    print $customer."</td></tr>";
+
+
+    $phone = $_GET["phone"];
+    echo "<tr><th>電話</th><td>";
+    print $phone."</td></tr>";
+
+    $memo = $_GET["memo"];
+    echo "<tr><th>備註</th><td>";
+    print nl2br($memo)."</td></tr>";
+    echo "</table>";
+    ?>    
+    </div>
+
+    <p class="clear"></p>
+    <footer>
+        <div id="contact_us">
+            Copyright © 佑宗租車公司 ALL RIGHTS RESERVED <br>
+            公司地址：東吳大學 &nbsp&nbsp&nbsp電話：0800-420-420 &nbsp&nbsp&nbsp傳真：02-28825252
+        </div>
+        <p class="clear"></p>
+    </footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
+
 </html>
