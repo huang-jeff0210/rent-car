@@ -64,7 +64,7 @@ a:hover{
 }
 .imgL {
 	float: left; 
-	margin-left: 100px;
+	margin-left: 70px;
 	margin-top: 80px;
 }
 
@@ -79,7 +79,7 @@ a:hover{
 		background-color: #FFFFFF;
 	}
 	#form_2 {
-		width: 35%;
+		width: 38%;
 		float: right;
 		text-align: center;
 		margin-right: 100px;
