@@ -244,7 +244,7 @@
             <img src="car2.jpeg" alt="car2" width="49%" height="50%" class="imgL">
             <!-- 表單2 -->
             <div id="form_2">
-                <form action="provide.php" method="GET">
+                <form action="provide.php" method="post" enctype="multipart/form-data">
                     <table border="1" class="entryTable">
                         <caption>提供車輛出租</caption>
                         <tr>
@@ -273,14 +273,14 @@
                         </tr>
                         <tr>
                             <th>提供車輛起始時間</th>
-                            <td><input type="date" name="start_date" value="2021-05-15" style="width: 140px;">
-                                <input type="time" name="start_time" value="12:00" style="width: 140px;">
+                            <td><input type="date" name="start_date" value="2021-05-15" style="width: 130px;">
+                                <input type="time" name="start_time" value="12:00" style="width: 130px;">
                             </td>
                         </tr>
                         <tr>
                             <th>提供車輛結束時間</th>
-                            <td><input type="date" name="end_date" value="2021-05-16" style="width: 140px;">
-                                <input type="time" name="end_time" value="20:00" style="width: 140px;">
+                            <td><input type="date" name="end_date" value="2021-05-16" style="width: 130px;">
+                                <input type="time" name="end_time" value="20:00" style="width: 130px;">
                             </td>
                         </tr>
                         <tr>
@@ -290,6 +290,10 @@
                         <tr>
                             <th>手機</th>
                             <td><input type="text" name="phone" style="width: 140px;"></td>
+                        </tr>
+                        <tr>
+                            <th>上傳車輛照片</th>
+                            <td><input type="file" name="photo"></td>
                         </tr>
                         <tr>
                             <th>備註</th>

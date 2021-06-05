@@ -67,25 +67,31 @@
             </div>
         </section>
     </header>
-    <p style="text-align: right; margin-right: 400px; margin-top: 20px; margin-bottom: -50px; font-size: 25px; font-family: 'Noto Serif TC', serif;">車型示意圖</p>
+    <!-- 圖檔上傳 -->
+    <?php 
+    if($_SERVER['REQUEST_METHOD'] === 'POST') { 
+        if( $_FILES['photo']['error'] != '4' ) { // 檢查有沒上傳圖檔
+            $file = $_FILES['photo']['tmp_name'] ;
+            $fp      = fopen($file, 'r');
+            $rawDataSS1 = fread($fp, filesize($file));
+            fclose($fp);
+            $_SESSION['sessionImg'] = $encodedSS1Data = base64_encode($rawDataSS1); // 將檔案邊碼(base64)後放入SESSION
+        }
+    }
+    ?>
+    <p style="text-align: right; margin-right: 400px; margin-top: 20px; margin-bottom: -50px; font-size: 25px; font-family: 'Noto Serif TC', serif;">上傳車輛照片</p>
         <p class="clear"></p>
-    <img src="<?php $car_type = $_GET["car_type"];
-    switch ($car_type) {
-        case "0":
-            print "Sedan.jpg"; break;
-        case "1":
-            print "Suv.jpg"; break;
-        case "2":
-            print "Sport car.jpg"; break;
-        case "3":
-            print "tesla.jpg"; break;
-    }?>" alt="car1" width="50%" height="50%" class="imgR" style="border: 2px solid #000;">
-
+    <?php 
+    if( isset($_SESSION['sessionImg']) && $_SESSION['sessionImg'] != '' ) { // 檢查SESSION有沒有值
+        echo '<img src="data:image/;base64,'.$_SESSION['sessionImg'].'" alt="car1" width="50%" height="50%" class="imgR" style="border: 2px solid #000;">'; // 顯示圖檔
+    } else 
+        echo '<p style="float: right; margin-right: 380px; margin-top: 100px; border: 2px solid #000; font-size: 25px; color:red; font-family: "Noto Serif TC", serif;">您未上傳車輛照片</p>';
+    ?>
     <div id="form_1">
     <?php
     echo "<table border = '1' class='entryTable'>"; 
     echo "<caption>訂單確認</caption>";
-    $car_type = $_GET["car_type"];  // 取得選擇鈕值
+    $car_type = $_POST["car_type"];  // 取得選擇鈕值
     echo "<tr><th>提供車輛種類</th><td>";
     switch ($car_type) {
         case "0":
@@ -99,7 +105,7 @@
     
     } 
     
-    $provide_location = $_GET["provide_location"];  // 取得選擇鈕值
+    $provide_location = $_POST["provide_location"];  // 取得選擇鈕值
     echo "<tr><th>車輛提供地點</th><td>";
     switch ($provide_location) {
         case "0":
@@ -114,28 +120,28 @@
             print "故宮博物院</td></tr>"; break;
     } 
 
-    $start_date = $_GET["start_date"];
-    $start_time = $_GET["start_time"];
+    $start_date = $_POST["start_date"];
+    $start_time = $_POST["start_time"];
     echo "<tr><th>提供車輛起始時間</th><td>";
     print $start_date . " " .$start_time."</td></tr>";
     
 
-    $end_date = $_GET["end_date"];
-    $end_time = $_GET["end_time"];
+    $end_date = $_POST["end_date"];
+    $end_time = $_POST["end_time"];
     echo "<tr><th>提供車輛結束時間</th><td>";
     print $end_date . " " .$end_time."</td></tr>";
 
 
-    $customer = $_GET["customer"];
+    $customer = $_POST["customer"];
     echo "<tr><th>姓名</th><td>";
     print $customer."</td></tr>";
 
 
-    $phone = $_GET["phone"];
+    $phone = $_POST["phone"];
     echo "<tr><th>電話</th><td>";
     print $phone."</td></tr>";
 
-    $memo = $_GET["memo"];
+    $memo = $_POST["memo"];
     echo "<tr><th>備註</th><td>";
     print nl2br($memo)."</td></tr>";
     echo "</table>";

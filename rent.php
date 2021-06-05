@@ -172,17 +172,18 @@
     print nl2br($memo)."</td></tr>";
     echo "</table>";
     ?> 
-
-    <div style = "font-size: 25px" >總共金額:<p style="color:red">
+ 
+    <div style = "font-size: 25px; font-family: 'Noto Serif TC', serif;">總共金額：<span style="color:red">
     <?php
     $date = (strtotime($end_date)-strtotime($start_date))/86400;
     $total_price = $date*3000;
     print $total_price."元整</p></div>";
     ?>
 
+    <p style="font-size: 20px; font-family: 'Noto Serif TC'"><a href="">前往結帳</a></p>
     
-       
-    </div>
+    </div>   
+    
 
     <p class="clear"></p>
     <footer>
