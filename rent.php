@@ -171,7 +171,17 @@
     echo "<tr><th>備註</th><td>";
     print nl2br($memo)."</td></tr>";
     echo "</table>";
-    ?>    
+    ?> 
+
+    <div style = "font-size: 25px" >總共金額:<p style="color:red">
+    <?php
+    $date = (strtotime($end_date)-strtotime($start_date))/86400;
+    $total_price = $date*3000;
+    print $total_price."元整</p></div>";
+    ?>
+
+    
+       
     </div>
 
     <p class="clear"></p>
