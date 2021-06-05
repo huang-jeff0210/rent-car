@@ -157,7 +157,7 @@
             </div>
         </section>
         <section id="rent">
-            <img src="car1.jpeg" alt="car1" width="50%" height="50%" class="imgR">
+            <img src="photo/car1.jpeg" alt="car1" width="50%" height="50%" class="imgR">
             <!-- 表單1 -->
             <div id="form_1">
                 <form action="rent.php" method="GET">
@@ -166,7 +166,7 @@
                         <tr>
                             <th>取車地點</th>
                             <td>
-                                <select name="start_location" style="width: 150px;">
+                                <select name="start_location" style="width: 150px;" required>
                                     <option value="" selected>請選擇</option>
                                     <option value="0">東吳大學</option>
                                     <option value="1">士林捷運站</option>
@@ -179,7 +179,7 @@
                         <tr>
                             <th>還車地點</th>
                             <td>
-                                <select name="end_location" style="width: 150px;">
+                                <select name="end_location" style="width: 150px;" required>
                                     <option value="" selected>請選擇</option>
                                     <option value="0">東吳大學</option>
                                     <option value="1">士林捷運站</option>
@@ -192,7 +192,7 @@
                         <tr>
                             <th>車輛選擇</th>
                             <td>
-                                <select name="car" style="width: 150px;">
+                                <select name="car" style="width: 150px;" required>
                                     <option value="" selected>請選擇</option>
                                     <option value="vios">2021 Vios 1.5雅緻＋</option>
                                     <option value="corolla">2021 Corolla Cross 1.8 Hybrid旗艦</option>
@@ -207,23 +207,23 @@
                         </tr>
                         <tr>
                             <th>取車日期與時間</th>
-                            <td><input type="date" name="start_date" value="2021-05-15" style="width: 130px;">
-                                <input type="time" name="start_time" value="12:00" style="width: 130px;">
+                            <td><input type="date" name="start_date" value="" style="width: 130px;" required/>
+                                <input type="time" name="start_time" value="" style="width: 130px;" required/>
                             </td>
                         </tr>
                         <tr>
                             <th>還車日期與時間</th>
-                            <td><input type="date" name="end_date" value="2021-05-16" style="width: 130px;">
-                                <input type="time" name="end_time" value="20:00" style="width: 130px;">
+                            <td><input type="date" name="end_date" value="" style="width: 130px;" required/>
+                                <input type="time" name="end_time" value="" style="width: 130px;" required/>
                             </td>
                         </tr>
                         <tr>
                             <th>姓名</th>
-                            <td><input type="text" name="customer" style="width: 140px;"></td>
+                            <td><input type="text" name="customer" style="width: 140px;"  required/></td>
                         </tr>
                         <tr>
                             <th>手機</th>
-                            <td><input type="text" name="phone" style="width: 140px;"></td>
+                            <td><input type="text" name="phone" style="width: 140px;" pattern="[0-9]{10,10}" required/></td>
                         </tr>
                         <tr>
                             <th>備註</th>
@@ -241,7 +241,7 @@
         </section>
         <section id="provide_car">
             <br>
-            <img src="car2.jpeg" alt="car2" width="49%" height="50%" class="imgL">
+            <img src="photo/car2.jpeg" alt="car2" width="49%" height="50%" class="imgL">
             <!-- 表單2 -->
             <div id="form_2">
                 <form action="provide.php" method="post" enctype="multipart/form-data">
@@ -250,7 +250,7 @@
                         <tr>
                             <th>提供車輛種類</th>
                             <td>
-                                <select name="car_type" style="width: 150px;">
+                                <select name="car_type" id="car_type" style="width: 150px;" required>
                                     <option value="" selected>請選擇</option>
                                     <option value="0">轎車</option>
                                     <option value="1">休旅車</option>
@@ -261,7 +261,7 @@
                         <tr>
                             <th>車輛提供地點</th>
                             <td>
-                                <select name="provide_location" style="width: 150px;">
+                                <select name="provide_location" style="width: 150px;" required>
                                     <option value="" selected>請選擇</option>
                                     <option value="0">東吳大學</option>
                                     <option value="1">士林捷運站</option>
@@ -273,27 +273,27 @@
                         </tr>
                         <tr>
                             <th>提供車輛起始時間</th>
-                            <td><input type="date" name="start_date" value="2021-05-15" style="width: 130px;">
-                                <input type="time" name="start_time" value="12:00" style="width: 130px;">
+                            <td><input type="date" name="start_date" value="" style="width: 130px;" required/>
+                                <input type="time" name="start_time" value="" style="width: 130px;" required/>
                             </td>
                         </tr>
                         <tr>
                             <th>提供車輛結束時間</th>
-                            <td><input type="date" name="end_date" value="2021-05-16" style="width: 130px;">
-                                <input type="time" name="end_time" value="20:00" style="width: 130px;">
+                            <td><input type="date" name="end_date" value="" style="width: 130px;" required/>
+                                <input type="time" name="end_time" value="" style="width: 130px;" required/>
                             </td>
                         </tr>
                         <tr>
                             <th>姓名</th>
-                            <td><input type="text" name="customer" style="width: 140px;"></td>
+                            <td><input type="text" name="customer" style="width: 140px" required/></td>
                         </tr>
                         <tr>
                             <th>手機</th>
-                            <td><input type="text" name="phone" style="width: 140px;"></td>
+                            <td><input type="text" name="phone" style="width: 140px" pattern="[0-9]{10,10}" required/></td>
                         </tr>
                         <tr>
                             <th>上傳車輛照片</th>
-                            <td><input type="file" name="photo"></td>
+                            <td><input type="file" name="photo" required/></td>
                         </tr>
                         <tr>
                             <th>備註</th>

@@ -72,21 +72,21 @@
     <img src="<?php $car = $_GET["car"];
     switch ($car) {
         case "vios":
-            print "Vios.jpeg"; break;
+            print "photo/Vios.jpeg"; break;
         case "corolla":
-            print "corolla.jpg"; break;
+            print "photo/corolla.jpg"; break;
         case "camry":
-            print "camry.jpeg"; break;
+            print "photo/camry.jpeg"; break;
         case "altis":
-            print "Altis.jpg"; break;
+            print "photo/Altis.jpg"; break;
         case "mazda":
-            print "mazda.png"; break;
+            print "photo/mazda.png"; break;
         case "rav4":
-            print "rav4.jpg"; break;
+            print "photo/rav4.jpg"; break;
         case "yaris":
-            print "yaris.jpg"; break;
+            print "photo/yaris.jpg"; break;
         case "wish":
-            print "wish.jpg"; break;
+            print "photo/wish.jpg"; break;
     }?>" alt="car1" width="50%" height="50%" class="imgR" style="border: 2px solid #000;">
 
     <div id="form_1">
