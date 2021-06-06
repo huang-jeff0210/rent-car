@@ -98,15 +98,15 @@
     $start_location = $_GET["start_location"];  // 取得選擇鈕值
     echo "<tr><th>取車地點</th><td>";
     switch ($start_location) {
-        case "0":
+        case "東吳大學":
             print "東吳大學</td></tr>"; break;
-        case "1":
+        case "士林捷運站":
             print "士林捷運站</td></tr>"; break;
-        case "2":
+        case "劍潭捷運站":
             print "劍潭捷運站</td></tr>"; break;
-        case "3":
+        case "大直美麗華":
             print "大直美麗華</td></tr>"; break;
-        case "4":
+        case "故宮博物院":
             print "故宮博物院</td></tr>"; break;
     } 
 
@@ -114,15 +114,15 @@
     $end_location = $_GET["end_location"];  // 取得選擇鈕值
     echo "<tr><th>還車地點</th><td>";
     switch ($end_location) {
-        case "0":
+        case "東吳大學":
             print "東吳大學</td></tr>"; break;
-        case "1":
+        case "士林捷運站":
             print "士林捷運站</td></tr>"; break;
-        case "2":
+        case "劍潭捷運站":
             print "劍潭捷運站</td></tr>"; break;
-        case "3":
+        case "大直美麗華":
             print "大直美麗華</td></tr>"; break;
-        case "4":
+        case "故宮博物院":
             print "故宮博物院</td></tr>"; break;
     } 
     $car = $_GET["car"];  // 取得選擇鈕值
@@ -183,13 +183,11 @@
     ?>
         
         <div style="padding-top: 10px;padding-left: 10px;">
-            <button name="Insert" type="submit" class="btn btn-primary" onclick="showModal()">前往結帳</button>
+            <button type="submit" name="Insert" class="btn btn-primary" onclick="showModal()">前往結帳</button>
         </div>
 
     </div>
-
     
-
     <!--彈跳視窗事件 -->
     <div class="modal" tabindex="-1" role="dialog" id="check">
         <div class="modal-dialog" role="document"> 
@@ -208,6 +206,16 @@
             </div>
         </div>
     </div>
+
+    <?php
+    $con=mysqli_connect("localhost","root","","租車申請");
+    mysqli_query($con,"SELECT * FROM `rentform`");
+    $sql="INSERT INTO rentform(取車地點,還車地點,車輛選擇,取車日期,取車時間,還車日期,還車時間,姓名,電話,備註,總金額)VALUES('$start_location','$end_location','$car','$start_date','$start_time','$end_date','$end_time','$customer','$phone','$memo','$total_price')";
+    if (isset($_GET["Insert"])) {
+        mysqli_query($con,$sql);
+    }
+    mysqli_close($con);
+    ?>
 
 
     <p class="clear"></p>
