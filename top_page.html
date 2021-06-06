@@ -160,7 +160,7 @@
             <img src="photo/car1.jpeg" alt="car1" width="50%" height="50%" class="imgR">
             <!-- 表單1 -->
             <div id="form_1">
-                <form action="rent.php" method="GET">
+                <form action="rent.php"  method="GET">
                     <table border="1" class="entryTable">
                         <caption>我要租車</caption>
                         <tr>
@@ -207,14 +207,14 @@
                         </tr>
                         <tr>
                             <th>取車日期與時間</th>
-                            <td><input type="date" name="start_date" value="" style="width: 130px;" required/>
-                                <input type="time" name="start_time" value="" style="width: 130px;" required/>
+                            <td><input type="date" name="start_date" value="Today" style="width: 130px;" pattern="yyyy-mm-dd" required/>
+                                <input type="time" name="start_time" value="" style="width: 130px;" pattern="hh-mm" required/>
                             </td>
                         </tr>
                         <tr>
                             <th>還車日期與時間</th>
-                            <td><input type="date" name="end_date" value="" style="width: 130px;" required/>
-                                <input type="time" name="end_time" value="" style="width: 130px;" required/>
+                            <td><input type="date" name="end_date" value="" style="width: 130px;" pattern="yyyy-mm-dd" required/>
+                                <input type="time" name="end_time" value="" style="width: 130px;" pattern="hh-mm" required/>
                             </td>
                         </tr>
                         <tr>
@@ -233,7 +233,7 @@
                     <br>
                     <div class="entryBtns">
                         <input type="reset" value="清除重填">
-                        <input type="submit" value="送出申請">
+                        <input type="submit" name="Insert" value="送出申請">
                     </div>
                 </form>
             </div>
@@ -273,14 +273,14 @@
                         </tr>
                         <tr>
                             <th>提供車輛起始時間</th>
-                            <td><input type="date" name="start_date" value="" style="width: 130px;" required/>
-                                <input type="time" name="start_time" value="" style="width: 130px;" required/>
+                            <td><input type="date" name="start_date" value="" style="width: 130px;" pattern="yyyy-mm-dd" required/>
+                                <input type="time" name="start_time" value="" style="width: 130px;" pattern="hh-mm" required/>
                             </td>
                         </tr>
                         <tr>
                             <th>提供車輛結束時間</th>
-                            <td><input type="date" name="end_date" value="" style="width: 130px;" required/>
-                                <input type="time" name="end_time" value="" style="width: 130px;" required/>
+                            <td><input type="date" name="end_date" value="" style="width: 130px;" pattern="yyyy-mm-dd" required/>
+                                <input type="time" name="end_time" value="" style="width: 130px;" pattern="hh-mm" required/>
                             </td>
                         </tr>
                         <tr>

@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/style_slider.css">
     <link rel="stylesheet" href="assets/css/mbr-additional.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -90,6 +91,7 @@
     }?>" alt="car1" width="50%" height="50%" class="imgR" style="border: 2px solid #000;">
 
     <div id="form_1">
+    
     <?php
     echo "<table border = '1' class='entryTable'>"; 
     echo "<caption>訂單確認</caption>";
@@ -179,11 +181,34 @@
     $total_price = $date*3000;
     print $total_price."元整</p></div>";
     ?>
+        
+        <div style="padding-top: 10px;padding-left: 10px;">
+            <button name="Insert" type="submit" class="btn btn-primary" onclick="showModal()">前往結帳</button>
+        </div>
 
-    <p style="font-size: 20px; font-family: 'Noto Serif TC'"><a href="">前往結帳</a></p>
+    </div>
+
     
-    </div>   
-    
+
+    <!--彈跳視窗事件 -->
+    <div class="modal" tabindex="-1" role="dialog" id="check">
+        <div class="modal-dialog" role="document"> 
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">收到訂單 ! ! !</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button> 
+                </div>
+                <div class="modal-body">
+                                   <p>我們已收到您的訂單，請記得提前15分鐘來辦理相關手續</p> 
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary"><a href="top_page.html#rent">關閉</a></button>
+                    <button type="button" class="btn btn-secondary" color="white"><a href="top_page.html">返回首頁</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <p class="clear"></p>
     <footer>
@@ -196,6 +221,11 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <script>
+    function showModal() {
+         $('#check').modal('show'); 
+        }
+    </script>
 </body>
 
 </html>
