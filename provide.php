@@ -94,13 +94,13 @@
     $car_type = $_POST["car_type"];  // 取得選擇鈕值
     echo "<tr><th>提供車輛種類</th><td>";
     switch ($car_type) {
-        case "0":
+        case "轎車":
             print "轎車</td></tr>"; break;
-        case "1":
+        case "休旅車":
             print "休旅車</td></tr>"; break;
-        case "2":
+        case "跑車":
             print "跑車</td></tr>"; break;
-        case "3":
+        case "電動車":
             print "電動車</td></tr>"; break;
     
     } 
@@ -108,15 +108,15 @@
     $provide_location = $_POST["provide_location"];  // 取得選擇鈕值
     echo "<tr><th>車輛提供地點</th><td>";
     switch ($provide_location) {
-        case "0":
+        case "東吳大學":
             print "東吳大學</td></tr>"; break;
-        case "1":
+        case "士林捷運站":
             print "士林捷運站</td></tr>"; break;
-        case "2":
+        case "劍潭捷運站":
             print "劍潭捷運站</td></tr>"; break;
-        case "3":
+        case "大直美麗華":
             print "大直美麗華</td></tr>"; break;
-        case "4":
+        case "故宮博物院":
             print "故宮博物院</td></tr>"; break;
     } 
 
@@ -145,9 +145,42 @@
     echo "<tr><th>備註</th><td>";
     print nl2br($memo)."</td></tr>";
     echo "</table>";
-    ?> 
-      
+    ?>
+
+        <div style="padding-top: 10px;padding-left: 10px;">
+            <button type="submit" name="Upload" class="btn btn-primary" onclick="showModal()">送出申請</button>
+        </div>  
+    
     </div>
+
+    <!--彈跳視窗事件 -->
+    <div class="modal" tabindex="-1" role="dialog" id="check">
+        <div class="modal-dialog" role="document"> 
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">收到申請!!!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button> 
+                </div>
+                <div class="modal-body">
+                                   <p>感謝您提供車輛租借，遇到有緣人會與您聯絡<3</p> 
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary"><a href="top_page.html#rent">關閉</a></button>
+                    <button type="button" class="btn btn-secondary" color="white"><a href="top_page.html">返回首頁</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <?php
+    $conn=mysqli_connect("localhost","root","","愛車租借");
+    mysqli_query($conn,"SELECT * FROM `borrowcar`");
+    $sql="INSERT INTO borrowcar(提供車輛種類,車輛提供地點,提供車輛起始日期,起始時間,提供車輛結束日期,結束時間,姓名,電話,備註)VALUES('$car_type','$provide_location','$start_date','$start_time','$end_date','$end_time','$customer','$phone','$memo')";
+    if (isset($_POST['Upload'])){
+        mysqli_query($conn,$sql);
+    }
+    mysqli_close($conn);
+    ?>
 
     <p class="clear"></p>
     <footer>
@@ -160,6 +193,11 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <script>
+    function showModal() {
+         $('#check').modal('show'); 
+        }
+    </script>
 </body>
 
 </html>
