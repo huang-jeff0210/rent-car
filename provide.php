@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/style_slider.css">
     <link rel="stylesheet" href="assets/css/mbr-additional.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -35,6 +36,7 @@
                                         <li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="top_page.html#provide_car">提供車輛出租</a></li>
                                         <li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="borrow_car.html">車款介紹</a></li>
                                         <li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="position.html">服務據點</a></li>
+                                        <li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="lovecar.html">愛車租借</a></li>
                                     </ul>
                                 </div>
                                 <div class="mbr-navbar__column">
@@ -148,7 +150,7 @@
     ?>
 
         <div style="padding-top: 10px;padding-left: 10px;">
-            <button type="submit" name="Upload" class="btn btn-primary" onclick="showModal()">送出申請</button>
+            <button type="submit" name="Insert" class="btn btn-primary" onclick="showModal()">送出申請</button>
         </div>  
     
     </div>
@@ -165,8 +167,8 @@
                                    <p>感謝您提供車輛租借，遇到有緣人會與您聯絡<3</p> 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary"><a href="top_page.html#rent">關閉</a></button>
-                    <button type="button" class="btn btn-secondary" color="white"><a href="top_page.html">返回首頁</a></button>
+                    <button type="button" class="btn btn-secondary"><a href="top_page.html">關閉</a></button>
+                    <button type="button" class="btn btn-secondary" color="white"><a href="lovecar.html">前往察看</a></button>
                 </div>
             </div>
         </div>
@@ -174,9 +176,9 @@
     
     <?php
     $conn=mysqli_connect("localhost","root","","愛車租借");
-    mysqli_query($conn,"SELECT * FROM `borrowcar`");
-    $sql="INSERT INTO borrowcar(提供車輛種類,車輛提供地點,提供車輛起始日期,起始時間,提供車輛結束日期,結束時間,姓名,電話,備註)VALUES('$car_type','$provide_location','$start_date','$start_time','$end_date','$end_time','$customer','$phone','$memo')";
-    if (isset($_POST['Upload'])){
+    mysqli_query($conn,"SELECT * FROM `provide`");
+    $sql="INSERT INTO `provide`(`提供車輛種類`,`車輛提供地點`,`提供車輛起始日期`,`起始時間`,`提供車輛結束日期`,`結束時間`,`姓名`,`電話`,`備註`)VALUES('$car_type','$provide_location','$start_date','$start_time','$end_date','$end_time','$customer','$phone','$memo')";
+    if (isset($_POST['Insert'])){
         mysqli_query($conn,$sql);
     }
     mysqli_close($conn);

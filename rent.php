@@ -36,6 +36,7 @@
                                         <li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="top_page.html#provide_car">提供車輛出租</a></li>
                                         <li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="borrow_car.html">車款介紹</a></li>
                                         <li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="position.html">服務據點</a></li>
+                                        <li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="lovecar.html">愛車租借</a></li>
                                     </ul>
                                 </div>
                                 <div class="mbr-navbar__column">
@@ -183,7 +184,7 @@
     ?>
         
         <div style="padding-top: 10px;padding-left: 10px;">
-            <button type="submit" name="Insert" class="btn btn-primary" onclick="showModal()">前往結帳</button>
+            <input type="submit" name="Insert" class="btn btn-primary" onclick="showModal()" value="前往結帳">
         </div>
 
     </div>
