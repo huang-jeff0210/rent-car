@@ -36,7 +36,6 @@
                                         <li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="top_page.html#provide_car">提供車輛出租</a></li>
                                         <li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="borrow_car.html">車款介紹</a></li>
                                         <li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="position.html">服務據點</a></li>
-                                        <li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="lovecar.php">愛車租借</a></li>
                                     </ul>
                                 </div>
                                 <div class="mbr-navbar__column">
@@ -182,11 +181,10 @@
     $total_price = $date*3000;
     print $total_price."元整</p></div>";
     ?>
-        
-        <div style="padding-top: 10px;padding-left: 10px;">
-            <input type="submit" name="Insert" class="btn btn-primary" onclick="showModal()" value="前往結帳">
-        </div>
 
+        <div style="padding-top: 10px;padding-left: 10px;">
+            <button type="submit" name="Insert" class="btn btn-primary" onclick="showModal()">前往結帳</button>
+        </div>
     </div>
     
     <!--彈跳視窗事件 -->
@@ -201,22 +199,27 @@
                                    <p>我們已收到您的訂單，請記得提前15分鐘來辦理相關手續</p> 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary"><a href="top_page.html#rent">關閉</a></button>
-                    <button type="button" class="btn btn-secondary" color="white"><a href="top_page.html">返回首頁</a></button>
+                    <form action="rent_insert_sql.php" method="POST">
+                    <button type="submit" name="write" class="btn btn-secondary">關閉</button>
+                    <button type="submit" name="write2" class="btn btn-secondary" color="white">返回首頁</button>
+                    <input type="hidden" name="start_location" value="<?php echo $start_location?>">
+                    <input type="hidden" name="end_location" value="<?php echo $end_location?>">
+                    <input type="hidden" name="car" value="<?php echo $car?>">
+                    <input type="hidden" name="start_date" value="<?php echo $start_date?>">
+                    <input type="hidden" name="start_time" value="<?php echo $start_time?>">
+                    <input type="hidden" name="end_date" value="<?php echo $end_date?>">
+                    <input type="hidden" name="end_time" value="<?php echo $end_time?>">
+                    <input type="hidden" name="customer" value="<?php echo $customer?>">
+                    <input type="hidden" name="phone" value="<?php echo $phone?>">
+                    <input type="hidden" name="memo" value="<?php echo $memo?>">
+                    <input type="hidden" name="total_price" value="<?php echo $total_price?>">
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 
-    <?php
-    $con=mysqli_connect("localhost","root","","租車申請");
-    mysqli_query($con,"SELECT * FROM `rentform`");
-    $sql="INSERT INTO rentform(取車地點,還車地點,車輛選擇,取車日期,取車時間,還車日期,還車時間,姓名,電話,備註,總金額)VALUES('$start_location','$end_location','$car','$start_date','$start_time','$end_date','$end_time','$customer','$phone','$memo','$total_price')";
-    if (isset($_GET["Insert"])) {
-        mysqli_query($con,$sql);
-    }
-    mysqli_close($con);
-    ?>
+
 
 
     <p class="clear"></p>
