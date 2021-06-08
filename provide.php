@@ -36,7 +36,7 @@
                                         <li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="top_page.html#provide_car">提供車輛出租</a></li>
                                         <li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="borrow_car.html">車款介紹</a></li>
                                         <li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="position.html">服務據點</a></li>
-                                        <li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="lovecar.php">愛車租借</a></li>
+                                        <li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="lovecar.html">愛車租借</a></li>
                                     </ul>
                                 </div>
                                 <div class="mbr-navbar__column">
@@ -167,22 +167,25 @@
                                    <p>感謝您提供車輛租借，遇到有緣人會與您聯絡<3</p> 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary"><a href="top_page.html">關閉</a></button>
-                    <button type="button" class="btn btn-secondary" color="white"><a href="lovecar.php">前往察看</a></button>
+                <form action="provide_insert_sql.php" method="POST">
+                    <button type="submit" name="write" class="btn btn-secondary">關閉</button>
+                    <button type="submit" name="write2" class="btn btn-secondary" color="white">前往察看</button>
+                    <input type="hidden" name="car_type" value="<?php echo $car_type?>">
+                    <input type="hidden" name="provide_location" value="<?php echo $provide_location?>">
+                    <input type="hidden" name="start_date" value="<?php echo $start_date?>">
+                    <input type="hidden" name="start_time" value="<?php echo $start_time?>">
+                    <input type="hidden" name="end_date" value="<?php echo $end_date?>">
+                    <input type="hidden" name="end_time" value="<?php echo $end_time?>">
+                    <input type="hidden" name="customer" value="<?php echo $customer?>">
+                    <input type="hidden" name="phone" value="<?php echo $phone?>">
+                    <input type="hidden" name="memo" value="<?php echo $memo?>">
+                </form>
                 </div>
             </div>
         </div>
     </div>
     
-    <?php
-    $conn=mysqli_connect("localhost","root","","愛車租借");
-    mysqli_query($conn,"SELECT * FROM `provide`");
-    $sql="INSERT INTO `provide`(`提供車輛種類`,`車輛提供地點`,`提供車輛起始日期`,`起始時間`,`提供車輛結束日期`,`結束時間`,`姓名`,`電話`,`備註`)VALUES('$car_type','$provide_location','$start_date','$start_time','$end_date','$end_time','$customer','$phone','$memo')";
-    if (isset($_POST['Insert'])){
-        mysqli_query($conn,$sql);
-    }
-    mysqli_close($conn);
-    ?>
+
 
     <p class="clear"></p>
     <footer>
