@@ -36,7 +36,7 @@
                                         <li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="top_page.html#provide_car">提供車輛出租</a></li>
                                         <li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="borrow_car.html">車款介紹</a></li>
                                         <li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="position.html">服務據點</a></li>
-                                        <li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="lovecar.html">愛車租借</a></li>
+                                        <li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="lovecar.php">愛車租借</a></li>
                                     </ul>
                                 </div>
                                 <div class="mbr-navbar__column">
@@ -168,7 +168,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary"><a href="top_page.html">關閉</a></button>
-                    <button type="button" class="btn btn-secondary" color="white"><a href="lovecar.html">前往察看</a></button>
+                    <button type="button" class="btn btn-secondary" color="white"><a href="lovecar.php">前往察看</a></button>
                 </div>
             </div>
         </div>

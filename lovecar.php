@@ -69,28 +69,35 @@
                 </div>
             </section>
         </header>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <footer>
-        <div id="contact_us">
-            Copyright © 佑宗租車公司 ALL RIGHTS RESERVED <br>
-            公司地址：東吳大學 &nbsp&nbsp&nbsp電話：0800-420-420 &nbsp&nbsp&nbsp傳真：02-28825252
-            
+        <div id="form_1">
+        <?php
+        $conn=mysqli_connect("localhost","root","","愛車租借");
+        $result = mysqli_query($conn,"SELECT * FROM `provide`");
+        echo "<table border=1><tr>";
+        while ( $meta = mysqli_fetch_field($result) )
+        echo "<td>".$meta->name."</td>";
+        echo "</tr>"; 
+        $total_fields = mysqli_num_fields($result);
+        // 顯示每一筆記錄
+        while ($row = mysqli_fetch_row($result)) { 
+        echo "<tr>"; 
+        for ( $i = 0; $i <= $total_fields-1; $i++ )
+            echo "<td>" . $row[$i] . "</td>";
+        echo "</tr>";
+        }
+        echo "</table>";
+        mysqli_free_result($result); 
+        mysqli_close($conn); 
+        ?>
         </div>
-        
-    </footer>
+        <footer>
+            <div id="contact_us">
+                Copyright © 佑宗租車公司 ALL RIGHTS RESERVED <br>
+                公司地址：東吳大學 &nbsp&nbsp&nbsp電話：0800-420-420 &nbsp&nbsp&nbsp傳真：02-28825252
+                    
+            </div>
+                
+        </footer>
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/script.js"></script>
