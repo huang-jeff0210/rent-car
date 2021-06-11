@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php   
-$url = "lovecar.html"; 
+$url = "lovecar.php"; 
 ?> 
 <html lang="zh-TW">
 <head>

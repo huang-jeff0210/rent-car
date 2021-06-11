@@ -8,6 +8,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
 	<link rel="shortcut icon" href="assets/images/icon.png" type="image/x-icon">
 	<title>出租車種</title>
+    <link href="style1.css" rel="stylesheet" type="text/css">
   	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/style_slider.css">
@@ -36,7 +37,7 @@
                                             <li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="top_page.html#provide_car">提供車輛出租</a></li>
                                             <li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="borrow_car.html">車款介紹</a></li>
                                             <li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="position.html">服務據點</a></li>
-                                            <li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="lovecar.html">愛車租借</a></li>
+                                            <li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="lovecar.php">愛車租借</a></li>
                                         </ul>
                                     </div>
                                     <div class="mbr-navbar__column">
@@ -68,14 +69,15 @@
                     </div>
                 </div>
             </section>
-        </header>
-        <div id="form_1">
+        </header> 
+        <div id='form_3'>
         <?php
         $conn=mysqli_connect("localhost","root","","愛車租借");
-        $result = mysqli_query($conn,"SELECT * FROM `provide`");
-        echo "<table border=1><tr>";
+        $result = mysqli_query($conn,"SELECT `提供車輛種類`, `車輛提供地點`, `提供車輛起始日期`, `起始時間`, `提供車輛結束日期`, `結束時間` ,`備註` FROM `provide`");
+
+        echo "<table border=1 class='car_table'><tr>";
         while ( $meta = mysqli_fetch_field($result) )
-        echo "<td>".$meta->name."</td>";
+        echo "<td style='background-color: #898989; color:#fff;'>".$meta->name."</td>";
         echo "</tr>"; 
         $total_fields = mysqli_num_fields($result);
         // 顯示每一筆記錄
@@ -88,8 +90,10 @@
         echo "</table>";
         mysqli_free_result($result); 
         mysqli_close($conn); 
+
         ?>
         </div>
+        <p class="clear"></p>
         <footer>
             <div id="contact_us">
                 Copyright © 佑宗租車公司 ALL RIGHTS RESERVED <br>

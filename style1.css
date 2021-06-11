@@ -86,9 +86,15 @@ a:hover{
 		margin-top: 10px;
 		background-color: #FFFFFF;
 	}
+	#form_3 {
+		width: 70%;
+		margin: 100px auto;
+		text-align: center;
+		background-color: #FFFFFF;
+	}
 }
 
-/*表單樣式*/
+/*表單樣式*/ 
 .entryTable {
 	width: 100%;
 	border-collapse: collapse;
@@ -128,6 +134,17 @@ a:hover{
 }
 .entryBtns input:hover{
 	opacity: 0.7;
+}
+
+.car_table {
+	width: 100%;
+	border-collapse: collapse;
+	border: 2px solid #000;
+	font-family: 'Noto Serif TC', serif;
+	font-size: 18px;
+}
+.car_table td {
+	padding: 10px 20px;
 }
 
 #contact_us {
